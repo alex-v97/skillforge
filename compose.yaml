@@ -1,0 +1,10 @@
+services:
+  skillforge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: skillforge_app
+    ports:
+      - ${SKILLFORGE_HTTP_PORT:-80}:80
+    volumes:
+      - .:/var/www/html
