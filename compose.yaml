@@ -6,5 +6,6 @@ services:
     container_name: skillforge_app
     ports:
       - ${SKILLFORGE_HTTP_PORT:-80}:80
+      - ${SKILLFORGE_HTTPS_PORT:-443}:443
     volumes:
       - .:/var/www/html
